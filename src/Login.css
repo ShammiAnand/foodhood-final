@@ -1,27 +1,42 @@
+.container {
+    background-color: rgb(241, 241, 164);
+}
+
 .login {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     place-items: center;
     height: 100vh;
 }
 
-.login > div > img {
+.login>div>img {
     object-fit: contain;
     height: 55%;
 }
 
-.login > div {
+.login__info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.login > button {
+.login__info__company {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.login__info>button {
+    margin: 10px 0;
+    padding: 10px;
     width: 300px;
     background-color: #2e81f4;
     color: #eff2f5;
     font-weight: 800;
 }
 
-.login > button:hover {
+/* 
+button:hover {
     background-color: white;
     color: #2e81f4;
-}
+} */

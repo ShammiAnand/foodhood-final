@@ -21,15 +21,23 @@ function Login() {
             .catch((error) => alert(error.message));
     }
     return (
-        <div className='login'>
-            <div className='login__logo'>
-                <img
-                    src='login-logo.png'
-                />
-            </div>
-            <Button type="submit" onClick={signIn}>
-                Sign In
-            </Button>
+        <div className='container'>
+            <div className='login'>
+                <div className='login__logo'>
+                    <img
+                        src='login-logo.png'
+                    />
+                </div>
+                <div className='login__info'>
+                    <div>
+                        <p><i>Welcome to</i></p>
+                        <p className='login__info__company'>FoodHood</p>
+                    </div>
+                    <Button type="submit" onClick={signIn}>
+                        Sign In
+                    </Button>
+                </div>
+            </div >
         </div>
     )
 }
