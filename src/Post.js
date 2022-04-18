@@ -6,8 +6,26 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'
 import NearMeIcon from '@mui/icons-material/NearMe'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import { ExpandMoreOutlined } from '@mui/icons-material'
+import DeleteIcon from '@mui/icons-material/Delete';
+import { useStateValue } from "./StateProvider";
+import db from './firebase';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
 
 function Post({ profilePic, image, username, timestamp, message }) {
+    const [{ user }, dispatch] = useStateValue();
+
+    const deletePost = (e) => {
+        e.preventDefault(); // prevents the default behaviour
+        // does not allows the page to refresh when button is clicked
+        db.collection("posts").where("username", "==", user.displayName).get()
+            .then(querySnapshot => {
+                querySnapshot.docs[0].ref.delete();
+            });
+    }
+
     return (
         <div className='post'>
             <div className='post__top'>
@@ -27,12 +45,12 @@ function Post({ profilePic, image, username, timestamp, message }) {
                     src={image}
                     alt="" />
             </div>
-            {/* <div className='post__options'>
+            <div className='post__options'>
                 <div className='post__option'>
-                    <ThumbUpIcon />
-                    <p>Like</p>
+                    <DeleteIcon onClick={deletePost} />
+                    <p>Delete</p>
                 </div>
-                <div className='post__option'>
+                {/* <div className='post__option'>
                     <ChatBubbleOutlineIcon />
                     <p>Comment</p>
                 </div>
@@ -43,8 +61,8 @@ function Post({ profilePic, image, username, timestamp, message }) {
                 <div className='post__option'>
                     <Avatar src={profilePic} />
                     <ExpandMoreOutlined />
-                </div>
-            </div> */}
+                </div> */}
+            </div>
         </div>
     )
 }

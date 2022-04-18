@@ -49,24 +49,24 @@ function MessageSender() {
                         placeholder="Image URL (Optional)"
                     />
                     <button onClick={handleSubmit} type="submit">
-                        Hidden Submit
+                        Post
                     </button>
                 </form>
             </div>
             <div className='messageSender__bottom'>
-                <div className='messageSender__option'>
+                {/* <div className='messageSender__option'>
                     <LocationOnIcon style={{ color: "red" }} />
                     <h3>Location</h3>
 
-                </div>
+                </div> */}
                 {/* <div className='messageSender__option'>
                     <PhotoLibraryIcon style={{ color: "green" }} />
                     <h3>Photo/Video</h3>
                 </div> */}
-                <div className='messageSender__option'>
+                {/* <div className='messageSender__option'>
                     <LocalDiningIcon style={{ color: "orange" }} />
                     <h3>Activity</h3>
-                </div>
+                </div> */}
             </div>
         </div>
     )

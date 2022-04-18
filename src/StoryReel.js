@@ -11,7 +11,7 @@ function StoryReel() {
                 // profileSrc="https://www.gravatar.com/avatar/97a0977287dad274db63963c937077de?s=290&20210315"
                 title="Near me"
             />
-            <Story
+            {/* <Story
                 image="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Kochi_montage2.jpg/250px-Kochi_montage2.jpg"
                 // profileSrc="https://www.gravatar.com/avatar/97a0977287dad274db63963c937077de?s=290&20210315"
                 title="Kochi"
@@ -30,7 +30,7 @@ function StoryReel() {
                 image="https://static.toiimg.com/thumb/msid-88428704,width-900,height-1200,resizemode-6.cms"
                 // profileSrc="https://www.gravatar.com/avatar/97a0977287dad274db63963c937077de?s=290&20210315"
                 title="Mumbai"
-            />
+            /> */}
         </div>
     )
 }

@@ -11,6 +11,7 @@ import ForumIcon from "@mui/icons-material/Forum";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MenuBookSharpIcon from '@mui/icons-material/MenuBookSharp';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import RestaurantSharpIcon from '@mui/icons-material/RestaurantSharp';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import "./Header.css"
@@ -45,10 +46,10 @@ function Header() {
                 </div>
                 <div className='header__option'>
                     <RestaurantSharpIcon fontSize='large' />
-                </div>
-                <div className='header__option'>
-                    <SupervisedUserCircleIcon fontSize='large' />
                 </div> */}
+                <div className='header__option'>
+                    <AccountCircleIcon fontSize='large' />
+                </div>
 
             </div>
             <div className='header__right'>
