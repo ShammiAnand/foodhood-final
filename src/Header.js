@@ -47,9 +47,9 @@ function Header() {
                 <div className='header__option'>
                     <RestaurantSharpIcon fontSize='large' />
                 </div> */}
-                <div className='header__option'>
+                {/* <div className='header__option'>
                     <AccountCircleIcon fontSize='large' />
-                </div>
+                </div> */}
 
             </div>
             <div className='header__right'>
